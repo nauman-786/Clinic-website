@@ -34,7 +34,7 @@ function App() {
   const handleBookAppointment = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://127.0.0.1:8000/book-appointment', formData);
+      await axios.post('https://clinic-website-1-m6bf.onrender.com/book-appointment', formData);
       alert("✅ Appointment Confirmed! We look forward to seeing you.");
       setFormData({ patient_name: '', phone_number: '', service_type: 'Dental', doctor_name: 'Dr. Kamil', appointment_date: '' });
     } catch (error) {
@@ -44,7 +44,7 @@ function App() {
 
   const fetchAppointments = async () => {
     try {
-      const response = await axios.get('http://127.0.0.1:8000/appointments');
+      const response = await axios.get('https://clinic-website-1-m6bf.onrender.com/appointments');
       setAppointments(response.data.appointments);
     } catch (error) {}
   };
@@ -52,7 +52,7 @@ function App() {
   const handleDelete = async (id) => {
     if (!window.confirm("Cancel this appointment?")) return;
     try {
-      await axios.delete(`http://127.0.0.1:8000/appointments/${id}`);
+      await axios.delete(`https://clinic-website-1-m6bf.onrender.com/appointments/${id}`);
       fetchAppointments();
     } catch (error) {}
   };
