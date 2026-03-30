@@ -29,7 +29,7 @@ function App() {
   // --- STAFF LOCK STATES ---
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [passwordInput, setPasswordInput] = useState('');
-  const STAFF_PASSWORD = "admin"; // This is the access code for the doctors
+  const STAFF_PASSWORD = "Pakistan47#"; // This is the access code for the doctors
 
   const [formData, setFormData] = useState({
     patient_name: '', phone_number: '', service_type: 'Dental', doctor_name: 'Dr. Kamil', appointment_date: ''
@@ -155,7 +155,7 @@ function App() {
           {/* 1. CINEMATIC FULL-SCREEN HERO (Scrolls naturally, uses /image.png) */}
           <div 
             className="relative min-h-[90vh] flex items-center bg-cover bg-center bg-gray-900"
-            style={{ backgroundImage: "url('/image.png')" }}
+            style={{ backgroundImage: "url(https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1920&q=80)" }}
           >
             {/* Dark gradient overlay for text readability */}
             <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/80 to-gray-900/40"></div>
